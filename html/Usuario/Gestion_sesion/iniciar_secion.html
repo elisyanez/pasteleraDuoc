@@ -12,11 +12,28 @@
             <input type="email" id="correo" name="correo" required><br><br>
 
             <label for="password">Contraseña:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="password" id="password" name="password" required><br>
+            <span id="loginError" style="color:red;"></span><br><br>
 
-            <button type="submit">Ingresar</button>
+            <button type="submit" onclick="return validarLogin()">Ingresar</button>
         </form>
         <br>
         <a href="usuario.html">⬅ Volver al menú de usuario</a>
     </body>
+        <script>
+        function validarLogin() {
+            var correo = document.getElementById("correo").value.trim();
+            var password = document.getElementById("password").value;
+            var usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
+            var usuario = usuarios.find(u => u.correo === correo && u.password === password);
+            document.getElementById("loginError").textContent = "";
+            if (!usuario) {
+                document.getElementById("loginError").textContent = "Correo o contraseña incorrectos.";
+                return false;
+            }
+            // Aquí puedes redirigir o mostrar mensaje de éxito
+            alert("¡Bienvenido, " + usuario.nombre + "!");
+            return false;
+        }
+        </script>
 </html>

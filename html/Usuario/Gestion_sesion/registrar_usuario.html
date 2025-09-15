@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1>Registrar Usuario</h1>
+    <p><span style="color:red">*</span> Los campos con * son obligatorios.</p>
         <form id="registroForm" action="#" method="post" onsubmit="return validarFormulario()">
             <label for="run">RUN: <span style="color:red">*</span></label><br>
             <input type="text" id="run" name="run" maxlength="9" minlength="7" required pattern="[0-9kK]+"><br>
@@ -46,6 +47,8 @@
             <span id="confirmPasswordError" style="color:red;"></span><br><br>
 
             <button type="submit">Registrar</button>
+            <span id="registroSuccess" style="color:green;"></span>
+            <span id="registroError" style="color:red;"></span>
         </form>
         <br>
         <a href="usuario.html">⬅ Volver al menú de usuario</a>
@@ -107,14 +110,43 @@
         function validarFormulario() {
             let correo = document.getElementById("correo").value.trim();
             let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm_password").value;
+            let run = document.getElementById("run").value.trim();
+            let nombre = document.getElementById("nombre").value.trim();
+            let apellidos = document.getElementById("apellidos").value.trim();
+            let fecha_nac = document.getElementById("fecha_nac").value;
+            let region = document.getElementById("region").value;
+            let comuna = document.getElementById("comuna").value;
+            let direccion = document.getElementById("direccion").value.trim();
+
             let correoError = validarCorreo(correo);
             let passwordError = validarPassword(password);
+            let confirmPasswordError = "";
+            if (password !== confirmPassword) {
+                confirmPasswordError = "Las contraseñas no coinciden.";
+            }
             document.getElementById("correoError").textContent = correoError;
             document.getElementById("passwordError").textContent = passwordError;
-            if (correoError || passwordError) {
+            document.getElementById("confirmPasswordError").textContent = confirmPasswordError;
+            document.getElementById("registroSuccess").textContent = "";
+            document.getElementById("registroError").textContent = "";
+            if (correoError || passwordError || confirmPasswordError) {
                 return false;
             }
-            return true;
+            // Guardar usuario en localStorage
+            let usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
+            if (usuarios.some(u => u.correo === correo)) {
+                document.getElementById("registroError").textContent = "El correo ya está registrado.";
+                return false;
+            }
+            let nuevoUsuario = {
+                run, nombre, apellidos, fecha_nac, region, comuna, direccion, correo, password
+            };
+            usuarios.push(nuevoUsuario);
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            document.getElementById("registroSuccess").textContent = "Usuario registrado exitosamente.";
+            document.getElementById("registroForm").reset();
+            return false;
         }
         </script>
     </body>
