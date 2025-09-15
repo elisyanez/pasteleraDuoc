@@ -145,7 +145,7 @@
             if (correoError || passwordError || confirmPasswordError) {
                 return false;
             }
-            // Guardar usuario en localStorage
+            // Con esto se guarda el usuario en el local storage
             let usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
             if (usuarios.some(u => u.correo === correo)) {
                 document.getElementById("registroError").textContent = "El correo ya está registrado.";
