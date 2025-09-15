@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+    <link rel="stylesheet" href="../../css/Main.css">
         <meta charset="UTF-8">
         <title>Beneficios Disponibles</title>
     </head>
     <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin:20px;">
-        <h1>Beneficios Disponibles</h1>
-        <ul>
-            <li>Descuento 50% en productos para mayores de 50 años</li>
-            <li>Descuento 10% de por vida con código <b>FELICES50</b></li>
-            <li>Torta gratis en cumpleaños para estudiantes DUOC (correo institucional)</li>
-        </ul>
-        <br>
-        <a href="usuario.html">⬅ Volver al menú</a>
+        <header class="topbar">
+            <div class="topbar-inner">
+                <img src="../../IMG/barra1.png" alt="Mil Sabores" width="300" height="200">
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <a href="Catalogo.html">Productos</a>
+                    <a href="../../Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                    <a href="Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; gap: 32px;">
+            <h1>Beneficios Disponibles</h1>
+            <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; width: 100%; max-width: 900px;">
+                <div style="background: #f7fbff; border-radius: 16px; box-shadow: 0 2px 8px #e3eafc; padding: 32px 24px; min-width: 320px; flex: 1 1 320px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+                    <h2>👵 50% para mayores de 50 años</h2>
+                    <p>Descuento permanente en todos los productos para clientes registrados con más de 50 años.</p>
+                </div>
+                <div style="background: #f7fbff; border-radius: 16px; box-shadow: 0 2px 8px #e3eafc; padding: 32px 24px; min-width: 320px; flex: 1 1 320px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+                    <h2>🎉 Código "FELICES50"</h2>
+                    <p>Obtén un <b>10% de descuento de por vida</b> en todos tus pedidos usando el código exclusivo al registrarte.</p>
+                </div>
+                <div style="background: #f7fbff; border-radius: 16px; box-shadow: 0 2px 8px #e3eafc; padding: 32px 24px; min-width: 320px; flex: 1 1 320px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+                    <h2>🎂 Torta gratis para estudiantes DUOC</h2>
+                    <p>Si eres estudiante de DUOC UC y te registras con tu correo institucional, recibes una torta gratis en tu cumpleaños.</p>
+                </div>
+            </div>
+            <a href="usuario.html" class="btn-secondary" style="margin-top: 32px;">⬅ Volver al menú</a>
+        </div>
     </body>
 </html>

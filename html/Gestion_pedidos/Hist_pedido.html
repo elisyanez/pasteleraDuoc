@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title>Historial de Pedidos</title>
+    <meta charset="UTF-8">
+    <title>Historial de Pedidos</title>
+    <link rel="stylesheet" href="../../css/Main.css">
     </head>
         <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin:20px;">
-        <h1>Historial de Pedidos</h1>
-        <table border="1" cellpadding="5">
-            <tr>
-            <th>ID Pedido</th>
-            <th>Producto</th>
-            <th>Fecha</th>
-            <th>Estado</th>
-            </tr>
-            <tr>
-            <td>#001</td>
-            <td>Torta de Chocolate</td>
-            <td>02-09-2025</td>
-            <td>Entregado</td>
-            </tr>
-        </table>
-        <br>
-        <a href="../Pedido.html">⬅ Volver al menú</a>
+        <header class="topbar">
+            <div class="topbar-inner">
+                <img src="../../IMG/barra1.png" alt="Mil Sabores" width="300" height="200">
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <a href="../../Catalogo.html">Productos</a>
+                    <a href="../../Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                    <a href="../../Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+            <h1>Historial de Pedidos</h1>
+            <table class="table-catalogo" style="margin: 0 auto;">
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Producto</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                </tr>
+                <tr>
+                    <td>#001</td>
+                    <td>Torta de Chocolate</td>
+                    <td>02-09-2025</td>
+                    <td><span class="badge badge-success">Entregado</span></td>
+                </tr>
+            </table>
+            <br>
+            <a href="../Pedido.html" class="btn-secondary">← Volver al menú</a>
+        </div>
     </body>
 </html>

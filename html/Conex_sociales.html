@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title>Conectar Redes Sociales</title>
+    <link rel="stylesheet" href="../css/Main.css">
+                <meta charset="UTF-8">
+                <title>Conectar Redes Sociales</title>
+                <style>
+                .btn-social {
+                    background: #7eb6e6;
+                    color: #fff;
+                    border: 2px solid #7eb6e6;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    padding: 10px 18px;
+                    margin: 4px 0;
+                    font-size: 16px;
+                    transition: background 0.25s, color 0.25s;
+                    cursor: pointer;
+                    width: 220px;
+                }
+                .btn-social:hover {
+                    background: #fff;
+                    color: #7eb6e6;
+                }
+                </style>
     </head>
-    <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin:20px;">
-        <h1>Conectar Redes Sociales</h1>
-        <button>Conectar con Facebook</button><br><br>
-        <button>Conectar con Instagram</button><br><br>
-        <button>Conectar con Twitter</button><br><br>
-        <a href="Usuario.html">⬅ Volver al menú</a>
+        <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin:20px;">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <img src="../IMG/barra1.png" alt="Mil Sabores" width="300" height="200" />
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <a href="Catalogo.html">Productos</a>
+                    <a href="Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                    <a href="Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+            <h1>Conectar Redes Sociales</h1>
+            <button class="btn-social">Conectar con Facebook</button><br><br>
+            <button class="btn-social">Conectar con Instagram</button><br><br>
+            <button class="btn-social">Conectar con Twitter</button><br><br>
+            <a href="Usuario.html">⬅ Volver al menú</a>
+        </div>
     </body>
 </html>
