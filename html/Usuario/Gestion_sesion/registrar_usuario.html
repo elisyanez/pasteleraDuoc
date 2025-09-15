@@ -5,53 +5,65 @@
         <meta charset="UTF-8">
         <title>Registrar Usuario</title>
     </head>
-    <body>
-        <h1>Registrar Usuario</h1>
-    <p><span style="color:red">*</span> Los campos con * son obligatorios.</p>
-        <form id="registroForm" action="#" method="post" onsubmit="return validarFormulario()">
-            <label for="run">RUN: <span style="color:red">*</span></label><br>
-            <input type="text" id="run" name="run" maxlength="9" minlength="7" required pattern="[0-9kK]+"><br>
-            <span id="runError" style="color:red;"></span><br>
+    <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin: 20px;">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <img src="../../../IMG/barra1.png" alt="Mil Sabores" width="300" height="200">
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <a href="../../Catalogo.html">Productos</a>
+                    <a href="../../Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                    <a href="../../Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+            <h1>Registrar Usuario</h1>
+            <p><span style="color:red">*</span> Los campos con * son obligatorios.</p>
+            <form id="registroForm" action="#" method="post" onsubmit="return validarFormulario()" style="max-width: 400px; width: 100%;">
+                <label for="run">RUN: <span style="color:red">*</span></label><br>
+                <input type="text" id="run" name="run" maxlength="9" minlength="7" required pattern="[0-9kK]+"><br>
+                <span id="runError" style="color:red;"></span><br>
 
-            <label for="nombre">Nombre: <span style="color:red">*</span></label><br>
-            <input type="text" id="nombre" name="nombre" maxlength="50" required><br>
-            <span id="nombreError" style="color:red;"></span><br>
+                <label for="nombre">Nombre: <span style="color:red">*</span></label><br>
+                <input type="text" id="nombre" name="nombre" maxlength="50" required><br>
+                <span id="nombreError" style="color:red;"></span><br>
 
-            <label for="apellidos">Apellidos: <span style="color:red">*</span></label><br>
-            <input type="text" id="apellidos" name="apellidos" maxlength="100" required><br>
-            <span id="apellidosError" style="color:red;"></span><br>
+                <label for="apellidos">Apellidos: <span style="color:red">*</span></label><br>
+                <input type="text" id="apellidos" name="apellidos" maxlength="100" required><br>
+                <span id="apellidosError" style="color:red;"></span><br>
 
-            <label for="fecha_nac">Fecha de Nacimiento: <span style="color:gray">(opcional)</span></label><br>
-            <input type="date" id="fecha_nac" name="fecha_nac"><br><br>
+                <label for="fecha_nac">Fecha de Nacimiento: <span style="color:gray">(opcional)</span></label><br>
+                <input type="date" id="fecha_nac" name="fecha_nac"><br><br>
 
-            <label for="region">Región: <span style="color:red">*</span></label><br>
-            <select id="region" name="region" required></select><br>
+                <label for="region">Región: <span style="color:red">*</span></label><br>
+                <select id="region" name="region" required></select><br>
 
-            <label for="comuna">Comuna: <span style="color:red">*</span></label><br>
-            <select id="comuna" name="comuna" required></select><br>
+                <label for="comuna">Comuna: <span style="color:red">*</span></label><br>
+                <select id="comuna" name="comuna" required></select><br>
 
-            <label for="direccion">Dirección: <span style="color:red">*</span></label><br>
-            <input type="text" id="direccion" name="direccion" maxlength="300" required><br>
-            <span id="direccionError" style="color:red;"></span><br>
+                <label for="direccion">Dirección: <span style="color:red">*</span></label><br>
+                <input type="text" id="direccion" name="direccion" maxlength="300" required><br>
+                <span id="direccionError" style="color:red;"></span><br>
 
-            <label for="correo">Correo electrónico: <span style="color:red">*</span></label><br>
-            <input type="email" id="correo" name="correo" maxlength="100" required><br>
-            <span id="correoError" style="color:red;"></span><br>
+                <label for="correo">Correo electrónico: <span style="color:red">*</span></label><br>
+                <input type="email" id="correo" name="correo" maxlength="100" required><br>
+                <span id="correoError" style="color:red;"></span><br>
 
-            <label for="password">Contraseña: <span style="color:red">*</span></label><br>
-            <input type="password" id="password" name="password" required><br>
-            <span id="passwordError" style="color:red;"></span><br><br>
+                <label for="password">Contraseña: <span style="color:red">*</span></label><br>
+                <input type="password" id="password" name="password" required><br>
+                <span id="passwordError" style="color:red;"></span><br><br>
 
-            <label for="confirm_password">Confirmar contraseña: <span style="color:red">*</span></label><br>
-            <input type="password" id="confirm_password" name="confirm_password" required><br>
-            <span id="confirmPasswordError" style="color:red;"></span><br><br>
+                <label for="confirm_password">Confirmar contraseña: <span style="color:red">*</span></label><br>
+                <input type="password" id="confirm_password" name="confirm_password" required><br>
+                <span id="confirmPasswordError" style="color:red;"></span><br><br>
 
-            <button type="submit">Registrar</button>
-            <span id="registroSuccess" style="color:green;"></span>
-            <span id="registroError" style="color:red;"></span>
-        </form>
-        <br>
-        <a href="usuario.html">⬅ Volver al menú de usuario</a>
+                <button type="submit">Registrar</button>
+                <span id="registroSuccess" style="color:green;"></span>
+                <span id="registroError" style="color:red;"></span>
+            </form>
+            <br>
+            <a href="usuario.html">⬅ Volver al menú de usuario</a>
+        </div>
 
         <script>
         // Datos de regiones y comunas de Chile
