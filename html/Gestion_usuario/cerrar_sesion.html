@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title>Cerrar Sesión</title>
+    <meta charset="UTF-8">
+    <title>Cerrar Sesión</title>
+    <link rel="stylesheet" href="../../css/Main.css">
     </head>
     <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin:20px;">
-        <h1>Cerrar Sesión</h1>
-        <p>¿Estás seguro de que deseas cerrar sesión?</p>
-        <button onclick="alert('Sesión cerrada')">Sí, cerrar sesión</button>
-        <br><br>
-        <a href="../Usuario.html">⬅ Volver al menú</a>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <img src="../../IMG/barra1.png" alt="Mil Sabores" width="300" height="200">
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="../../Catalogo.html">Productos</a>
+                <a href="../../Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                <a href="../../Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+    <div style="background: #fdf6f0; border-radius: 16px; box-shadow: 0 2px 8px #e3eafc; padding: 32px 32px 24px 32px; min-width: 320px; max-width: 350px; display: flex; flex-direction: column; align-items: center;">
+            <h1 style="margin-bottom: 10px;">Cerrar Sesión</h1>
+            <p style="margin-bottom: 18px;">¿Estás seguro de que deseas cerrar sesión?</p>
+            <form onsubmit="alert('Sesión cerrada'); return false;" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <button type="submit" class="btn-danger" style="width: 100%; max-width: 220px;">Sí, cerrar sesión</button>
+            </form>
+        </div>
+        <br>
+        <a href="../Usuario.html" class="btn-secondary">⬅ Volver al menú</a>
+    </div>
     </body>
 </html>

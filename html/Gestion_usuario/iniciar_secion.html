@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+    
     <head>
-        <meta charset="UTF-8">
-        <title>Iniciar Sesión</title>
+        
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../../css/Main.css">
     </head>
+    
     <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin: 20px;">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <img src="../../IMG/barra1.png" alt="Mil Sabores" width="300" height="200">
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="../../Catalogo.html">Productos</a>
+                <a href="../../Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                <a href="../../Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
         <h1>Iniciar Sesión</h1>
-        <form action="#" method="post">
-            <label for="correo">Correo electrónico:</label><br>
-            <input type="email" id="correo" name="correo" required><br><br>
-
-            <label for="password">Contraseña:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <button type="submit">Ingresar</button>
+        <form action="#" method="post" style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 260px;">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required style="padding:8px; border-radius:4px; border:1px solid #b3c6e7; width: 220px; background: #f7fbff; color: #2d3a4a;">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required style="padding:8px; border-radius:4px; border:1px solid #b3c6e7; width: 220px; background: #f7fbff; color: #2d3a4a;">
+            <button type="submit" class="btn-primary">Ingresar</button>
         </form>
         <br>
-        <a href="../Usuario.html">⬅ Volver al menú de usuario</a>
+        <a href="../Usuario.html" class="btn-secondary">⬅ Volver al menú de usuario</a>
+    </div>
     </body>
 </html>
