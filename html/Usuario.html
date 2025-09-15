@@ -5,34 +5,48 @@
     <meta charset="UTF-8">
     <title>Administración de Usuario - Pastelería Mil Sabores</title>
   </head>
+<<<<<<< HEAD
   <body>
+=======
+  <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin: 20px;">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <img src="../IMG/barra1.png" alt="Mil Sabores" width="300" height="200" />
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="Catalogo.html">Productos</a>
+          <a href="Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+          <a href="Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+>>>>>>> 7b1e5b183bf388a9dd4da313fa1bc622f6166832
     
-    <h1>Administración de Usuario</h1>
-    <hr>
-
-    <section>
-      <h2>Gestión de Sesión</h2>
-      <ul>
-        <li><a href="Gestion_usuario/iniciar_secion.html">Iniciar sesión</a></li>
-        <li><a href="Gestion_usuario/cerrar_sesion.html">Cerrar sesión</a></li>
-        <li><a href="Gestion_usuario/eliminar_cuenta.html">Eliminar cuenta</a></li>
-        
-      </ul>
-    </section>
-
-
-    <section>
-      <h2>Perfil de Usuario</h2>
-      <ul>
-        <li><a href="Gestion_usuario/modificar_correo.html">Modificar correo electrónico</a></li>
-        <li><a href="Gestion_usuario/actualizar_info.html">Actualizar información personal</a></li>
-        <li><a href="Gestion_usuario/config_preferencias.html">Configurar preferencias de compra</a></li>
-        <li><a href="Gestion_usuario/recuperar_contraseña.html">Recuperar contraseña</a></li>
-        <li><a href="Gestion_usuario/cambiar_contraseña.html">Cambiar contraseña</a></li>
-        <li><a href="Gestion_usuario/conf_metodo_pago.html">Configurar métodos de pago</a></li>
-      </ul>
-    </section>
-    <a href="Main.html">⬅ Volver al menú principal</a>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; gap: 32px;">
+      <h1>Administración de Usuario</h1>
+      <hr>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; width: 100%; max-width: 900px;">
+        <section style="background: #f7fbff; border-radius: 16px; box-shadow: 0 2px 8px #e3eafc; padding: 32px 24px; min-width: 320px; flex: 1 1 320px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+          <h2>Gestión de Sesión</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px; width: 100%; align-items: center;">
+            <a href="Gestion_usuario/iniciar_secion.html" class="btn-primary" style="width: 100%; max-width: 320px;">Iniciar sesión</a>
+            <a href="Gestion_usuario/cerrar_sesion.html" class="btn-secondary" style="width: 100%; max-width: 320px;">Cerrar sesión</a>
+            <a href="Gestion_usuario/eliminar_cuenta.html" class="btn-danger" style="width: 100%; max-width: 320px;">Eliminar cuenta</a>
+          </div>
+        </section>
+        <section style="background: #f7fbff; border-radius: 16px; box-shadow: 0 2px 8px #e3eafc; padding: 32px 24px; min-width: 320px; flex: 1 1 320px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+          <h2>Perfil de Usuario</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px; width: 100%; align-items: center;">
+            <a href="Gestion_usuario/modificar_correo.html" class="btn-primary" style="width: 100%; max-width: 320px;">Modificar correo electrónico</a>
+            <a href="Gestion_usuario/actualizar_info.html" class="btn-primary" style="width: 100%; max-width: 320px;">Actualizar información personal</a>
+            <a href="Gestion_usuario/config_preferencias.html" class="btn-primary" style="width: 100%; max-width: 320px;">Configurar preferencias de compra</a>
+            <a href="Gestion_usuario/recuperar_contraseña.html" class="btn-secondary" style="width: 100%; max-width: 320px;">Recuperar contraseña</a>
+            <a href="Gestion_usuario/cambiar_contraseña.html" class="btn-secondary" style="width: 100%; max-width: 320px;">Cambiar contraseña</a>
+            <a href="Gestion_usuario/conf_metodo_pago.html" class="btn-secondary" style="width: 100%; max-width: 320px;">Configurar métodos de pago</a>
+          </div>
+        </section>
+      </div>
+      <a href="Main.html" class="btn-secondary" style="margin-top: 32px;">⬅ Volver al menú principal</a>
+    </div>
 
   </body>
 </html>

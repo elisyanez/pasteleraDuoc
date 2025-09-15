@@ -5,23 +5,35 @@
         <meta charset="UTF-8">
         <title>Menú de Pedidos</title>
     </head>
+<<<<<<< HEAD
     <body>
+=======
+        <body bgcolor="#FFF5EE" style="font-family: Arial, sans-serif; margin:20px;">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <img src="../IMG/barra1.png" alt="Mil Sabores" width="300" height="200" />
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <a href="Catalogo.html">Productos</a>
+                    <a href="Gestion_pedidos/Acceder_carrito.html">Carrito</a>
+                    <a href="Gestion_usuario/iniciar_secion.html">Iniciar sesión</a>
+                </nav>
+            </div>
+        </header>
+>>>>>>> 7b1e5b183bf388a9dd4da313fa1bc622f6166832
     
-        <h1>Gestión de Pedidos</h1>
-        <p>Selecciona una opción para administrar tus pedidos:</p>
-        <hr>
-
-        <ul>
-            <li><a href="Gestion_pedidos/Hist_pedido.html">Ver historial de pedidos</a></li>
-            <li><a href="Gestion_pedidos/Estado_pedido.html">Consultar estado de pedido</a></li>
-            <li><a href="Gestion_pedidos/Imprimir_boleta.html">Imprimir boletas</a></li>
-            <li><a href="Gestion_pedidos/Acceder_carrito.html">Ver carrito</a></li>
-            <li><a href="Gestion_pedidos/Seguimiento_pedido.html">Rastrear pedido</a></li>
-            <li><a href="Gestion_pedidos/Conf_pref_entrega.html">Configurar Preferencia de entrega</a></li>
-        </ul>
-
-        <br><hr>
-        <a href="Main.html">⬅ Volver al menú principal</a>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+            <h1 style="margin-bottom: 6px;">Gestión de Pedidos</h1>
+            <p style="font-size: 1.08rem; margin-bottom: 8px; text-align: center; max-width: 420px;">Administra tus compras, consulta el estado de tus pedidos, imprime boletas y configura tus preferencias de entrega desde aquí.</p>
+            <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 370px; margin-bottom: 18px;">
+                <a href="Gestion_pedidos/Hist_pedido.html" class="btn-primary" style="width: 100%; text-align: left; display: flex; align-items: center; gap: 10px;">📜 <span>Ver historial de pedidos</span></a>
+                <a href="Gestion_pedidos/Estado_pedido.html" class="btn-primary" style="width: 100%; text-align: left; display: flex; align-items: center; gap: 10px;">🔎 <span>Consultar estado de pedido</span></a>
+                <a href="Gestion_pedidos/Imprimir_boleta.html" class="btn-primary" style="width: 100%; text-align: left; display: flex; align-items: center; gap: 10px;">🧾 <span>Imprimir boletas</span></a>
+                <a href="Gestion_pedidos/Acceder_carrito.html" class="btn-primary" style="width: 100%; text-align: left; display: flex; align-items: center; gap: 10px;">🛒 <span>Ver carrito</span></a>
+                <a href="Gestion_pedidos/Seguimiento_pedido.html" class="btn-primary" style="width: 100%; text-align: left; display: flex; align-items: center; gap: 10px;">🚚 <span>Rastrear pedido</span></a>
+                <a href="Gestion_pedidos/Conf_pref_entrega.html" class="btn-primary" style="width: 100%; text-align: left; display: flex; align-items: center; gap: 10px;">⏰ <span>Configurar Preferencia de entrega</span></a>
+            </div>
+            <a href="Main.html" class="btn-secondary">⬅ Volver al menú principal</a>
+        </div>
 
     </body>
 </html>
